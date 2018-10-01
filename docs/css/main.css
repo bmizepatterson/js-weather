@@ -64,9 +64,9 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #e9ecef;
   text-align: left;
-  background-color: #e9ecef;
+  background-color: #212529;
 }
 
 [tabindex="-1"]:focus {
@@ -479,7 +479,7 @@ mark,
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #e9ecef;
+  background-color: #212529;
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
   max-width: 100%;
@@ -1523,7 +1523,7 @@ pre code {
   border-top: 2px solid #dee2e6;
 }
 .table .table {
-  background-color: #e9ecef;
+  background-color: #212529;
 }
 
 .table-sm th,
@@ -1685,7 +1685,7 @@ pre code {
 }
 
 .table .thead-dark th {
-  color: #e9ecef;
+  color: #212529;
   background-color: #212529;
   border-color: #32383e;
 }
@@ -1696,7 +1696,7 @@ pre code {
 }
 
 .table-dark {
-  color: #e9ecef;
+  color: #212529;
   background-color: #212529;
 }
 .table-dark th,
@@ -1852,7 +1852,7 @@ select.form-control:focus::-ms-value {
   padding-bottom: 0.375rem;
   margin-bottom: 0;
   line-height: 1.5;
-  color: #212529;
+  color: #e9ecef;
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0;
@@ -2013,7 +2013,7 @@ textarea.form-control {
   background-color: #9ee84c;
 }
 .was-validated .custom-control-input:valid:focus ~ .custom-control-label::before, .custom-control-input.is-valid:focus ~ .custom-control-label::before {
-  box-shadow: 0 0 0 1px #e9ecef, 0 0 0 0.2rem rgba(133, 226, 31, 0.25);
+  box-shadow: 0 0 0 1px #212529, 0 0 0 0.2rem rgba(133, 226, 31, 0.25);
 }
 
 .was-validated .custom-file-input:valid ~ .custom-file-label, .custom-file-input.is-valid ~ .custom-file-label {
@@ -2105,7 +2105,7 @@ textarea.form-control {
   background-color: #e4606d;
 }
 .was-validated .custom-control-input:invalid:focus ~ .custom-control-label::before, .custom-control-input.is-invalid:focus ~ .custom-control-label::before {
-  box-shadow: 0 0 0 1px #e9ecef, 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+  box-shadow: 0 0 0 1px #212529, 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
 
 .was-validated .custom-file-input:invalid ~ .custom-file-label, .custom-file-input.is-invalid ~ .custom-file-label {
@@ -2759,7 +2759,7 @@ input[type=button].btn-block {
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
-  color: #212529;
+  color: #e9ecef;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -3202,7 +3202,7 @@ input[type=button].btn-block {
   background-color: #f75f1c;
 }
 .custom-control-input:focus ~ .custom-control-label::before {
-  box-shadow: 0 0 0 1px #e9ecef, 0 0 0 0.2rem rgba(247, 95, 28, 0.25);
+  box-shadow: 0 0 0 1px #212529, 0 0 0 0.2rem rgba(247, 95, 28, 0.25);
 }
 .custom-control-input:active ~ .custom-control-label::before {
   color: #fff;
@@ -3400,13 +3400,13 @@ input[type=button].btn-block {
   outline: none;
 }
 .custom-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 1px #e9ecef, 0 0 0 0.2rem rgba(247, 95, 28, 0.25);
+  box-shadow: 0 0 0 1px #212529, 0 0 0 0.2rem rgba(247, 95, 28, 0.25);
 }
 .custom-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #e9ecef, 0 0 0 0.2rem rgba(247, 95, 28, 0.25);
+  box-shadow: 0 0 0 1px #212529, 0 0 0 0.2rem rgba(247, 95, 28, 0.25);
 }
 .custom-range:focus::-ms-thumb {
-  box-shadow: 0 0 0 1px #e9ecef, 0 0 0 0.2rem rgba(247, 95, 28, 0.25);
+  box-shadow: 0 0 0 1px #212529, 0 0 0 0.2rem rgba(247, 95, 28, 0.25);
 }
 .custom-range::-moz-focus-outer {
   border: 0;
@@ -3557,8 +3557,8 @@ input[type=button].btn-block {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: #495057;
-  background-color: #e9ecef;
-  border-color: #dee2e6 #dee2e6 #e9ecef;
+  background-color: #212529;
+  border-color: #dee2e6 #dee2e6 #212529;
 }
 .nav-tabs .dropdown-menu {
   margin-top: -1px;
@@ -4579,7 +4579,7 @@ input[type=button].btn-block {
   background-color: #f8f9fa;
 }
 .list-group-item-action:active {
-  color: #212529;
+  color: #e9ecef;
   background-color: #e9ecef;
 }
 
@@ -5167,7 +5167,7 @@ button.close {
 
 .popover-body {
   padding: 0.5rem 0.75rem;
-  color: #212529;
+  color: #e9ecef;
 }
 
 .carousel {
@@ -8485,7 +8485,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-body {
-  color: #212529 !important;
+  color: #e9ecef !important;
 }
 
 .text-muted {
@@ -8610,16 +8610,8 @@ h3 {
     border-color: #dee2e6;
   }
 }
-.halloween-card-header {
-  font-weight: bold;
-  color: #f75f1c;
-  font-size: 25px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-body {
-  max-width: 500px !important;
+.container {
+  max-width: 500px;
 }
 
 #output {
