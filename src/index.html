@@ -14,8 +14,8 @@
     <form class="text-center mt-5">
       <div class="form-row justify-content-center">
         <div class="col-auto">
-          <label class="sr-only" for="zipcodeInput">Zip Code</label>
-          <input type="text" class="form-control mb-2" id="zipcodeInput" placeholder="Zip code or city" size="30">
+          <label class="sr-only" for="locationInput">Zip code or city</label>
+          <input type="text" class="form-control mb-2" id="locationInput" placeholder="Zip code or city" size="30">
         </div>
         <div class="col-auto">
           <button id="weatherButton" type="button" class="btn btn-primary mb-2">Submit</button>
@@ -24,7 +24,7 @@
     </form>
 
     <div id="error">
-        <div class="alert alert-info text-center">Test</div>
+        <div class="alert alert-info text-center"></div>
     </div>
 
     <div id="output">
@@ -33,7 +33,7 @@
             <h2>City</h2>
           </div>
           <div class="card-body">
-            <p id="output-city" class="card-text text-center"></p>
+            <p id="output-city" class="card-text text-center text-dark"></p>
           </div>
         </div>
 
@@ -43,9 +43,9 @@
           </div>
           <div class="card-body p-0">
             <div class="row card-text text-center">
-                <div id="output-k" class="col border-right p-3"></div>
-                <div id="output-f" class="col border-right p-3"></div>
-                <div id="output-c" class="col p-3"></div>
+                <div id="output-k" class="col border-right p-3 text-dark"></div>
+                <div id="output-f" class="col border-right p-3 text-dark"></div>
+                <div id="output-c" class="col p-3 text-dark"></div>
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@
               <h2>Condition</h2>
           </div>
           <div class="card-body">
-            <p id="output-condition" class="card-text text-center"></p>
+            <p id="output-condition" class="card-text text-center text-dark"></p>
           </div>
         </div>
 
