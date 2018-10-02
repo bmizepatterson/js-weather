@@ -6,10 +6,9 @@
 
     <link rel="stylesheet" href="css/main.css" type="text/css">
 
-    <title>JavaScript Weather App</title>
+    <title>Weather</title>
 </head>
 <body class="container">
-    <h1 class="text-center mt-5">JavaScript Weather App</h1>
 
     <form class="text-center mt-5">
       <div class="form-row justify-content-center">
@@ -28,45 +27,37 @@
     </div>
 
     <div id="output">
-        <div class="card mt-5">
-          <div class="card-header text-center text-dark">
-            <h2>City</h2>
-          </div>
-          <div class="card-body">
-            <p id="output-city" class="card-text text-center text-dark"></p>
-          </div>
-        </div>
+        <p id="temperatures">
+            <span id="output-f"></span>
+            <span id="output-c"></span>
+        </p>
+        <h1 id="output-city" class="mt-5 mb-0"></h1>
+        <small><span id="output-lat"></span>, <span id="output-lon"></span></small>
+        <p id="output-condition"></p>
 
-        <div class="card mt-5">
-          <div class="card-header text-center text-dark">
-              <h2>Temperature</h2>
-          </div>
-          <div class="card-body p-0">
-            <div class="row card-text text-center">
-                <div id="output-k" class="col border-right p-3 text-dark"></div>
-                <div id="output-f" class="col border-right p-3 text-dark"></div>
-                <div id="output-c" class="col p-3 text-dark"></div>
+        <div class="row">
+            <div class="col">
+                <table class="table table-hover">
+                    <tr>
+                        <th>Humidity:</th><td id="output-hum"></td>
+                    </tr>
+                    <tr>
+                        <th>Pressure:</th><td id="output-pres"></td>
+                    </tr>
+                </table>
             </div>
-          </div>
+            <div class="col">
+                <table class="table table-hover">
+                    <tr>
+                        <th>Sunrise:</th><td id="output-rise"></td>
+                    </tr>
+                    <tr>
+                        <th>Sunset:</th><td id="output-set"></td>
+                    </tr>
+                </table>
+            </div>
         </div>
 
-        <div class="card mt-5">
-          <div class="card-header text-center text-dark">
-              <h2>Condition</h2>
-          </div>
-          <div class="card-body">
-            <p id="output-condition" class="card-text text-center text-dark"></p>
-          </div>
-        </div>
-
-        <div class="card mt-5 mb-5">
-          <div class="card-header text-center text-dark">
-              <h2>Seasonal Image</h2>
-          </div>
-          <div class="card-body">
-            <img src="" class="img-fluid" id="output-image">
-          </div>
-        </div>
     </div>
 
 

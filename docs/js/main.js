@@ -62,14 +62,25 @@ function onSuccess() {
     let output_condition = document.getElementById('output-condition');
     let output_c = document.getElementById('output-c');
     let output_f = document.getElementById('output-f');
-    let output_k = document.getElementById('output-k');
-    let output_image = document.getElementById('output-image');
+    let output_lat = document.getElementById('output-lat');
+    let output_lon = document.getElementById('output-lon');
+    let output_hum = document.getElementById('output-hum');
+    let output_pres = document.getElementById('output-pres');
+    let output_rise = document.getElementById('output-rise');
+    let output_set = document.getElementById('output-set');
     output_city.innerHTML = response.name;
     output_condition.innerHTML = response.weather[0].description;
-    output_k.innerHTML = Math.round(response.main.temp) + ' K';
-    output_c.innerHTML = Math.round(KtoC(response.main.temp)) + ' C';
-    output_f.innerHTML = Math.round(KtoF(response.main.temp)) + ' F';
-    output_image.src = decideImage(response.main.temp); // TODO: ADD the following:
+    output_c.innerHTML = '(' + Math.round(KtoC(response.main.temp)) + '&deg; C)';
+    output_f.innerHTML = Math.round(KtoF(response.main.temp)) + '&deg; F';
+    output_lat.innerHTML = response.coord.lat;
+    output_lon.innerHTML = response.coord.lon;
+    output_hum = response.main.humidity + '%';
+    output_pres = response.main.pressure + 'hPa';
+    let sunrise = new Date(response.sys.sunrise * 1000);
+    output_rise.innerHTML = sunrise.getHours() + ':' + sunrise.getMinutes();
+    let sunset = new Date(response.sys.sunset * 1000);
+    output_set.innerHTML = sunset.getHours() + ':' + sunset.getMinutes();
+    console.log(output_c.innerHTML); // TODO: ADD the following:
     //  - response.clouds
     //  - response.coords
     //  - response.main.humidity
@@ -99,16 +110,4 @@ function KtoC(tempK) {
 
 function KtoF(tempK) {
   return tempK * 9 / 5 - 459.67;
-}
-
-function decideImage(tempK) {
-  if (tempK > 294) {
-    // HOT!
-    return "https://i.ytimg.com/vi/PR2XYraqyqs/maxresdefault.jpg";
-  } else if (tempK < 285) {
-    // COLD!
-    return "https://i.ytimg.com/vi/YH4Xr6GIp4U/maxresdefault.jpg";
-  }
-
-  return "https://i.ytimg.com/vi/LML6SoNE7xE/hqdefault.jpg";
 }

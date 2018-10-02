@@ -15,12 +15,11 @@ $black:    #000;
 $body-bg:       $gray-900;
 $body-color:    $gray-200;
 
-$primary:       #f75f1c; // orange
-$secondary:     #000; //black
-$success:       #85e21f; // green
-$info:          #881ee4; // purple
-$warning:       #ff9a00; //
-// $danger:        $red ; //
+// $primary:       #f75f1c;
+// $secondary:     #000;
+// $success:       #85e21f;
+// $info:          #881ee4;
+// $warning:       #ff9a00;
 
 // Bootstrap and its default variables
 @import "../../node_modules/bootstrap/scss/bootstrap";
@@ -35,4 +34,22 @@ $warning:       #ff9a00; //
 
 #error {
     display: none;
+}
+
+#output-condition {
+    font-style: italic;
+    font-size: 1.3em;
+}
+
+#temperatures {
+    float:right;
+    font-size: 60px;
+    #output-c {
+        font-size: 30px;
+        color: $gray-400;
+    }
+}
+
+th {
+    width: 100px;
 }
