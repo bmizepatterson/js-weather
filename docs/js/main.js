@@ -18,7 +18,7 @@ document.onreadystatechange = function () {
 
 function getWeather() {
   // Base API url
-  let url = 'http://api.openweathermap.org/data/2.5/weather?'; // Zip code/city input element
+  let url = 'https://api.openweathermap.org/data/2.5/weather?'; // Zip code/city input element
 
   let location = document.getElementById('locationInput'); // Determine search mode: either zip code or city name
 
@@ -79,18 +79,7 @@ function onSuccess() {
     let sunrise = new Date(response.sys.sunrise * 1000);
     output_rise.innerHTML = sunrise.getHours() + ':' + sunrise.getMinutes();
     let sunset = new Date(response.sys.sunset * 1000);
-    output_set.innerHTML = sunset.getHours() + ':' + sunset.getMinutes();
-    console.log(output_c.innerHTML); // TODO: ADD the following:
-    //  - response.clouds
-    //  - response.coords
-    //  - response.main.humidity
-    //  - response.main.pressure
-    //  - response.sys.sunrise
-    //  - response.sys.sunset
-    //  - response.visibility
-    //  - response.wind.deg
-    //  - response.wind.speed
-    // Turn "off" error
+    output_set.innerHTML = sunset.getHours() + ':' + sunset.getMinutes(); // Turn "off" error
 
     error.style.display = 'none'; // Turn "on" output
 
