@@ -39,12 +39,11 @@ function getWeather() {
   apiRequest.send();
 }
 
-function onError(msg = null) {
+function onError() {
+  msg = "An error has occurred. Please try again.";
+
   if (apiRequest.responseText) {
     msg = JSON.parse(apiRequest.responseText).message;
-  } else if (msg == null) {
-    // General error message if no other is provided.
-    msg = "An error has occurred. Please try again.";
   } // Update the text inside error
 
 
