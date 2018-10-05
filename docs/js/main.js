@@ -8,7 +8,9 @@ let apiRequest = new XMLHttpRequest(); // div tag where API response data will g
 
 let output = document.getElementById('output'); // div tag where error messages will go
 
-let error = document.getElementById('error');
+let error = document.getElementById('error'); // iframe for Google map
+
+let map = document.getElementById('map');
 
 document.onreadystatechange = function () {
   if (document.readyState == "interactive") {
@@ -57,6 +59,7 @@ function onError() {
 function onSuccess() {
   if (apiRequest.status == "200") {
     let response = JSON.parse(apiRequest.responseText);
+    console.log(response);
     let output_city = document.getElementById('output-city');
     let output_condition = document.getElementById('output-condition');
     let output_c = document.getElementById('output-c');
@@ -78,7 +81,9 @@ function onSuccess() {
     let sunrise = new Date(response.sys.sunrise * 1000);
     output_rise.innerHTML = sunrise.getHours() + ':' + sunrise.getMinutes();
     let sunset = new Date(response.sys.sunset * 1000);
-    output_set.innerHTML = sunset.getHours() + ':' + sunset.getMinutes(); // Turn "off" error
+    output_set.innerHTML = sunset.getHours() + ':' + sunset.getMinutes(); // Set map iframe source
+
+    map.src = "https://www.google.com/maps/embed/v1/view?key=AIzaSyBqotwxy9_ElElXn264jaUZ79v9se_Tsak&center=" + response.coord.lat + ',' + response.coord.lon + '&zoom=10'; // Turn "off" error
 
     error.style.display = 'none'; // Turn "on" output
 
